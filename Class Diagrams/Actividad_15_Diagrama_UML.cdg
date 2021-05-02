@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Diagrama de clase">
+  <ClassDiagramComponents>
+    <Class name="Pedido" package="" visibility="public" xPosition="16.0" yPosition="180.0">
+      <Fields>
+        <Field name="fecha" type="string" visibility="private"/>
+        <Field name="precio" type="float" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="despachar" returnType="void" visibility="public"/>
+        <Method name="cerrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="" visibility="public" xPosition="302.0" yPosition="180.0">
+      <Fields>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="precio" type="float" visibility="private"/>
+        <Field name="correcto" type="bool" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="302.0" yPosition="339.0">
+      <Fields>
+        <Field name="nombre" type="string" visibility="private"/>
+        <Field name="direccion" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Pedido-Producto" source="Pedido" target="Producto" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="cliente-pedido" source="Cliente" target="Pedido" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
